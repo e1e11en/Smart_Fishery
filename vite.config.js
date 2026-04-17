@@ -3,6 +3,7 @@ import vue from '@vitejs/plugin-vue'
 import path from 'path'
 
 export default defineConfig({
+  base: '/Smart_Fishery/',
   plugins: [vue()],
   resolve: {
     alias: {
@@ -15,8 +16,8 @@ export default defineConfig({
       '/api': {
         target: 'http://localhost:8080',
         changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api/, ''),
-        base: '/Smart_Fishery/'
+        rewrite: (path) => path.replace(/^\/api/, '')
+
       }
     }
   }
